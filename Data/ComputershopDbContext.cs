@@ -13,6 +13,7 @@ namespace ComputerShopll.Data
         public DbSet<ShoppingCartItem> shoppingCartItems { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<ContactMessage> ContactMessages { get; set; }
 
 
         //seed data
