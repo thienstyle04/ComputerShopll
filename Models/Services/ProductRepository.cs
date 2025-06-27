@@ -1,5 +1,6 @@
 ﻿using ComputerShopll.Data;
 using ComputerShopll.Models.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ComputerShopll.Models.Services
 {
@@ -25,5 +26,6 @@ namespace ComputerShopll.Models.Services
         {
             return dbContext.Products.Where(p => p.IsTrendingProduct);
         }
+       
     }
 }

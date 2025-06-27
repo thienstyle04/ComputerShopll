@@ -1,14 +1,20 @@
 ﻿using ComputerShopll.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 namespace ComputerShopll.Data
 {
-    public class ComputershopDbContext:DbContext
+    public class ComputershopDbContext : IdentityDbContext
     {
         public ComputershopDbContext(DbContextOptions<ComputershopDbContext> options) :
         base(options)
         {
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<ShoppingCartItem> shoppingCartItems { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+
+
         //seed data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
